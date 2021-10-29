@@ -38,3 +38,13 @@
 *.exe
 *.out
 *.app
+
+mpags-cipher
+test_input.in
+test_output.out
+CMakeFiles/*
+settings.json
+.vscode/*
+Makefile
+*.cmake
+CMakeCache.txt
