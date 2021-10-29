@@ -1,1 +1,51 @@
-*
+# Lines beginning with a '#' are comments
+# Text Editor Temp Files
+*~
+*.swp
+
+# Mac Filesystem
+.DS_Store?
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+mpags-cipher
+#devcontainer.json
+#Dockerfile
+test_input.in
+test_output.out
+CMakeFiles/*
+.vscode/settings.json
+Makefile
+*.cmake
+CMakeCache.txt
