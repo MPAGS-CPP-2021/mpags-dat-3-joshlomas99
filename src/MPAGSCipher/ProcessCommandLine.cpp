@@ -5,7 +5,7 @@
 #include <vector>
 
 bool processCommandLine(const std::vector<std::string>& cmdLineArgs,
-                        ProgramSettings& MPAGSCipherSettings)
+                        ProgramSettings& mpagsCipherSettings)
 {
     // Status flag to indicate whether or not the parsing was successful
     bool processStatus{true};
@@ -16,11 +16,11 @@ bool processCommandLine(const std::vector<std::string>& cmdLineArgs,
     for (std::size_t i{1}; i < nCmdLineArgs; ++i) {
         if (cmdLineArgs[i] == "-h" || cmdLineArgs[i] == "--help") {
             // Set the indicator and terminate the loop
-            MPAGSCipherSettings.helpRequested = true;
+            mpagsCipherSettings.helpRequested = true;
             break;
         } else if (cmdLineArgs[i] == "--version") {
             // Set the indicator and terminate the loop
-            MPAGSCipherSettings.versionRequested = true;
+            mpagsCipherSettings.versionRequested = true;
             break;
         } else if (cmdLineArgs[i] == "-i") {
             // Handle input file option
@@ -33,7 +33,7 @@ bool processCommandLine(const std::vector<std::string>& cmdLineArgs,
                 break;
             } else {
                 // Got filename, so assign value and advance past it
-                MPAGSCipherSettings.inputFile = cmdLineArgs[i + 1];
+                mpagsCipherSettings.inputFile = cmdLineArgs[i + 1];
                 ++i;
             }
         } else if (cmdLineArgs[i] == "-o") {
@@ -47,7 +47,7 @@ bool processCommandLine(const std::vector<std::string>& cmdLineArgs,
                 break;
             } else {
                 // Got filename, so assign value and advance past it
-                MPAGSCipherSettings.outputFile = cmdLineArgs[i + 1];
+                mpagsCipherSettings.outputFile = cmdLineArgs[i + 1];
                 ++i;
             }
         } else if (cmdLineArgs[i] == "-k") {
@@ -61,13 +61,13 @@ bool processCommandLine(const std::vector<std::string>& cmdLineArgs,
                 break;
             } else {
                 // Got the key, so assign the value and advance past it
-                MPAGSCipherSettings.cipherKey = cmdLineArgs[i + 1];
+                mpagsCipherSettings.cipherKey = cmdLineArgs[i + 1];
                 ++i;
             }
         } else if (cmdLineArgs[i] == "--encrypt") {
-            MPAGSCipherSettings.encrypt = true;
+            mpagsCipherSettings.encrypt = true;
         } else if (cmdLineArgs[i] == "--decrypt") {
-            MPAGSCipherSettings.encrypt = false;
+            mpagsCipherSettings.encrypt = false;
         } else {
             // Have encoutered an unknown flag, output an error message,
             // set the flag to indicate the error and terminate the loop
