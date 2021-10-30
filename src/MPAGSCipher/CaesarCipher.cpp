@@ -48,7 +48,7 @@ std::string CaesarCipher::applyCipher(const std::string inputText, const CipherM
     // Make sure that the key is in the correct range for this alphabet
     const std::size_t truncatedKey{key_ % alphabetSize};
 
-    // Loop over the input text
+    // Loop over the input text.
     char processedChar{'x'};
     for (const auto& origChar : inputText) {
         // For each character in the input text, find the corresponding position in
