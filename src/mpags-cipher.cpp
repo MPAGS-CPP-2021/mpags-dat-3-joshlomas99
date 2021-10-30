@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
     CaesarCipher caesarCipher{mpagsCipherSettings.cipherKey};
 
     // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
-    std::string outputText{runCaesarCipher(inputText, caesarCipher.key_, mpagsCipherSettings.encrypt)};
+    std::string outputText{caesarCipher.applyCipher(inputText, mpagsCipherSettings.encrypt)};
 
     // Output the encrypted/decrypted text to stdout/file
     if (!mpagsCipherSettings.outputFile.empty()) {

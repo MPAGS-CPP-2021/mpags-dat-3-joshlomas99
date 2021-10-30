@@ -40,8 +40,8 @@
 *.app
 
 mpags-cipher
-test_input.in
-test_output.out
+input.in
+output.out
 CMakeFiles/*
 settings.json
 .vscode/*
