@@ -1,6 +1,7 @@
 #ifndef MPAGSCIPHER_PROCESSCOMMANDLINE_HPP
 #define MPAGSCIPHER_PROCESSCOMMANDLINE_HPP
 
+#include "CipherMode.hpp"
 #include <string>
 #include <vector>
 
@@ -10,7 +11,7 @@ struct ProgramSettings {
     std::string inputFile; ///< Name of input file.
     std::string outputFile; ///< Name of output file.
     std::string cipherKey; ///< Cipher key.
-    bool encrypt; ///< Whether to encrypt (true) or decrypt (false).
+    CipherMode encrypt; ///< Whether to encrypt (true) or decrypt (false).
 };
 
 bool processCommandLine(const std::vector<std::string>& cmdLineArgs,

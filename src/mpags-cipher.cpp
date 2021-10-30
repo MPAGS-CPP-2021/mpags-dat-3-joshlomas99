@@ -2,6 +2,7 @@
 #include "RunCaesarCipher.hpp"
 #include "TransformChar.hpp"
 #include "CaesarCipher.hpp"
+#include "CipherMode.hpp"
 
 #include <cctype>
 #include <fstream>
@@ -15,7 +16,7 @@ int main(int argc, char* argv[])
     const std::vector<std::string> cmdLineArgs{argv, argv + argc};
 
     // Options that might be set by the command-line arguments
-    ProgramSettings mpagsCipherSettings{false, false, "", "", "", true};
+    ProgramSettings mpagsCipherSettings{false, false, "", "", "", CipherMode::Encrypt};
 
     // Process command line arguments
     const bool cmdLineStatus{processCommandLine(cmdLineArgs, mpagsCipherSettings)};

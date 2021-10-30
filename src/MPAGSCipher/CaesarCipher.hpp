@@ -1,6 +1,7 @@
 #ifndef MPAGSCIPHER_CAESARCIPHER_HPP
 #define MPAGSCIPHER_CAESARCIPHER_HPP
 
+#include "CipherMode.hpp"
 #include <string>
 #include <vector>
 
@@ -8,7 +9,7 @@ class CaesarCipher {
     public:
         explicit CaesarCipher(const std::size_t cipherKey);
         explicit CaesarCipher(const std::string cipherKey);
-        std::string applyCipher(const std::string inputText, const bool encrypt);
+        std::string applyCipher(const std::string inputText, const CipherMode encrypt);
     
     private:
         std::size_t key_{0}; ///< Cipher key.
