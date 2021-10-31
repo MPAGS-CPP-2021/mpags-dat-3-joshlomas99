@@ -42,7 +42,8 @@
 mpags-cipher
 input.in
 output.out
-CMakeFiles/*
+*/CMakeFiles/*
+*/*/CMakeFiles/*
 settings.json
 .vscode/*
 Makefile
