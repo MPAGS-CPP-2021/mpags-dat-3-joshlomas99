@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
     // Like help, requires no further action,
     // so return from main with zero to indicate success
     if (mpagsCipherSettings.versionRequested) {
-        std::cout << "0.2.0" << std::endl;
+        std::cout << "0.2.7" << std::endl;
         return 0;
     }
 

@@ -9,6 +9,7 @@ TEST_CASE("Characters are uppercased", "[alphanumeric]") {
     const std::string lower{"abcdefghijklmnopqrstuvwxyz"};
 
     for (size_t i = 0; i < upper.size(); i++){
+        REQUIRE(transformChar(upper[i]) == std::string{upper[i]});
         REQUIRE(transformChar(lower[i]) == std::string{upper[i]});
     }
 }
