@@ -24,7 +24,7 @@ add_executable(testProcessCommandLine testProcessCommandLine.cpp)
 target_link_libraries(testProcessCommandLine MPAGSCipher Catch)
 add_test(NAME test-processcommandline COMMAND testProcessCommandLine)
 
-# # Test CaesarCipher
-# add_executable(testCaesarCipher testCaesarCipher.cpp)
-# target_link_libraries(testCaesarCipher MPAGSCipher Catch)
-# add_test(NAME test-caesarcipher COMMAND testCaesarCipher)
+# Test CaesarCipher
+add_executable(testCaesarCipher testCaesarCipher.cpp)
+target_link_libraries(testCaesarCipher MPAGSCipher Catch)
+add_test(NAME test-caesarcipher COMMAND testCaesarCipher)

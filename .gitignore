@@ -39,7 +39,7 @@
 *.out
 *.app
 
-mpags-cipher
+# mpags-cipher
 input.in
 output.out
 */CMakeFiles/*
