@@ -10,7 +10,7 @@ CaesarCipher::CaesarCipher(const std::size_t cipherKey) : key_{cipherKey % alpha
 {
 }
 
-CaesarCipher::CaesarCipher(const std::string cipherKey)
+CaesarCipher::CaesarCipher(const std::string cipherKey) : key_{0}
 {
     if (!cipherKey.empty()){
         // Before doing the conversion we should check that the string contains a

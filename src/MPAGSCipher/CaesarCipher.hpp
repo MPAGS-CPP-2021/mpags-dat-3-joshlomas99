@@ -17,10 +17,10 @@ class CaesarCipher {
                                 const CipherMode encrypt) const;
     
     private:
-        std::size_t key_{0}; ///< Cipher key.
         const std::vector<char> alphabet_{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}; ///< Alphabet container.
         const std::size_t alphabetSize_{alphabet_.size()}; ///< Size of alphabet.
+        std::size_t key_{0}; ///< Cipher key.
 };
 
 #endif    // MPAGSCIPHER_CAESARCIPHER_HPP
